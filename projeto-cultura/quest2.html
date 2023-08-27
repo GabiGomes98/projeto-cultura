@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário sobre Cultura</title>
+</head>
+<body>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <form action="cadastro.html" method="get">
+        <fieldset>
+            <legend><h2>Pesquisa sobre Cultura</h2></legend>
+            
+            <fieldset>
+                <legend><h3>Com que frequência você participa dos eventos culturais em sua comunidade?</h3></legend>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Frequentemente</label><br>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Ocasionalmente</label><br>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Raramente</label><br>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Nunca</label><br>
+            </fieldset><br>
+
+            <fieldset>
+                <legend><h3>Quais instalações existem em sua localidade?</h3></legend>
+                <h2>Teatro</h2>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Sim</label><br>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Não</label><br>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Não sei</label><br>
+
+                <!-- Outras instalações... -->
+
+            </fieldset><br>
+
+            <fieldset>
+                <legend><h3>Você está satisfeito com a promoção da cultura em sua localidade?</h3></legend>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Sim</label><br>
+                <input type="checkbox" name="#" id="#">
+                <label for="#">Não</label><br>
+            </fieldset><br>
+
+            <input type="hidden" name="acao" value="enviar">
+            <button type="submit" name="Submit" class="submit_btn">Enviar</button>
+            <input type="reset" value="LIMPAR">
+
+        </fieldset>
+
+    </form>
+
+    <div id="mensagem"></div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            exibirMensagem();
+        });
+
+        function exibirMensagem() {
+            document.getElementById("mensagem").innerHTML = "Pesquisa respondida com sucesso";
+        }
+    </script>
+</body>
+</html>
